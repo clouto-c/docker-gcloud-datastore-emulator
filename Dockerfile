@@ -9,4 +9,4 @@ ENV CONSISTENCY=1.0
 EXPOSE $PORT
 
 ENTRYPOINT ["gcloud", "beta", "emulators", "datastore"]
-CMD ["start", "--consistency=${CONSISTENCY}", "--host-port=127.0.0.1:${PORT}, "--no-store-on-disk"]
+CMD ["start", "--consistency=${CONSISTENCY}", "--host-port=0.0.0.0:${PORT}, "--no-store-on-disk"]
